@@ -1,0 +1,66 @@
+What's in the Folder:
+1. Folder A2_new: Contains the source code and build files 
+                  for building a jar which can run in standalone mode and 
+                  the user can specify the bin-size and sample-rate.
+2. Folder A2_original: Contains the source code and build files
+                       for building a jar which can run in standalone mode 
+                       and it works the same as A1 version 2.
+3. Folder JARS: Contains the jars built using Eclipse for user to run on Cluster:
+  (1) A2_binsize.jar: The user can specifies a bin-size.
+  (2) A2_new.jar: The jar built using Eclipse. It can only be used in Standalone 
+                  mode. The user can specifies a bin-size and a sample rate.       
+  (3) A2_original.jar: It works the same as the A1 version 2.
+
+How to Run the Code:
+1. If you want to build jars to run in Standalone mode: 
+(1) A2_new:
+    a) In your terminal, cd to A2_new.
+    b) Run the command:
+       $ ant jar
+    c) If you haven't set your $HADOOP_HOME, cd to the hadoop home directory, 
+       for example:
+       $ cd usr/local/hadoop-x.x.x/
+    d) Run the command to start mapreduce job:
+       $ bin/hadoop jar <path_to_Huang_Yaxin>/A2_new/lib/MapReduce_A2.jar \
+         <input-file-path> <output-directory-path> <bin-size> <sample-rate>
+       NOTE: Both bin-size and sample-rate should be an integer larger than 0.
+             bin-size: For example if bin-size = 5, the Combiner will calculate 
+                       an intermediate median for every 5 price numbers in a 
+                       category.
+             sample-rate: For example if sample-rate = 1, the program will take 
+                          the whole input file. If sample-rate = 2, the program 
+                          will take the 1,3,5,7,9.... lines as map input. If 
+                          sample-rate = 3, the program will take the 1,4,7,10,...
+                          lines as map input. And so on.
+    e) The stdout will display the sampling time and job running time.
+
+(2) A2_original:
+    a) In your terminal, cd to A2_original.
+    b) Run the command:
+       $ ant jar
+    c) If you haven't set your $HADOOP_HOME, cd to the hadoop home directory, 
+       for example:
+       $ cd usr/local/hadoop-x.x.x/
+    d) Run the command to start mapreduce job:
+       $ bin/hadoop jar path_to_Huang_Yaxin/A2_original/lib/MapReduce_A2.jar \
+         <input-file-path> <output-directory-path>
+    e) The stdout will display the job running time.
+
+2. If you want to run jars on AWS cluster:
+(1) Basically follow the steps mentioned in the post here:
+    https://piazza.com/class/i4ppp5auv1n7k5?cid=94
+(2) After you created the bucket to store your file, please upload
+    "A2_binsize.jar" and "A2_original.jar" in folder JARS in a folder 
+    in your bucket. And upload the input file in the same way.
+(3) When you need to add a step to run the custom jar:
+    a) Add a step to run the ORIGINAL jar:
+       JAR location (for example): s3://bucketname/folder/A2_original.jar
+       Argument: s3://bucketname/folder/purchases4.txt s3://bucketname/folder/output_ori
+                 (<input-file-path> <output-directory-path>)
+    b) Add a step to run the jar with BIN SIZE:
+       JAR location (for example): s3://bucketname/folder/A2_binsize.jar
+       Argument: s3://bucketname/folder/purchases4.txt 
+                 s3://bucketname/folder/output_ori 5
+                 (<input-file-path> <output-directory-path> <bin-size>)
+       NOTE: bin-size should be an integer larger than 0.
+

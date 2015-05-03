@@ -1,0 +1,13 @@
+ant -f build-master.xml jar
+mv master.jar ./lib/master.jar
+
+ant -f build-slave.xml jar
+ant -f build-user.xml jar
+
+scp -i yaxinkey.pem user_test.jar ec2-user@52.1.10.30:~/user_test.jar
+scp -i yaxinkey.pem purchase-small.txt  ec2-user@52.1.10.30:~/purs.txt
+scp -i yaxinkey.pem configuration  ec2-user@52.1.10.30:~/configuration
+
+scp -i yaxinkey.pem slave.jar ec2-user@52.4.252.245:~/slave.jar
+scp -i yaxinkey.pem slave.jar ec2-user@52.5.190.51:~/slave.jar
+scp -i yaxinkey.pem slave.jar ec2-user@52.5.166.158:~/slave.jar

@@ -1,0 +1,13 @@
+1. All the python scripts can be run using python 2.
+   Before running, copy all data from the R version HW1 to a folder
+   "input_data" (please create it on your own).
+2. Cd to Yaxin_Huang_CS6220_HW_1
+3. The input data are already inside the "input_data" folder.
+4. Please run in all the scripts using these commands:
+   (1) $ python q1.py
+   (2) $ python q2.py
+   (3) $ python q3.py
+   Note: Please do follow the order of the commands.
+5. The codes will generate two more folders, "log" and "pic".
+   "log" stores all outputs from the codes.
+   "pic" stores the graphs for question 1 and 2.

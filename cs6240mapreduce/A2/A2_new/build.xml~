@@ -1,0 +1,57 @@
+<!-- This build.xml format comes from: --> 
+<!-- http://oak.cs.ucla.edu/cs144/projects/ant/tutorial.html -->
+<project default="all">
+  <property name="obj-dir" location="obj" />
+  <property name="lib-dir" location="lib" />
+  <property name="src-dir" location="src" />
+  <property name="jar-name" value="MapReduce_A2" />
+  <property name="main-class" value="MedianOfPurchases" />
+  <path id="classpath">
+    <fileset dir="${lib-dir}" includes="**/*.jar"/>
+  </path>
+
+  <target name="init" depends="clean-init">
+    <mkdir dir="${obj-dir}" />
+  </target>
+
+  <target name="clean-init">
+    <delete dir="${obj-dir}" />
+  </target>
+
+  <target name="compile" depends="init, clean-complie">
+    <javac srcdir="${src-dir}" 
+           destdir="${obj-dir}" 
+           classpathref="classpath" />
+  </target>
+
+  <target name="clean-compile">
+    <delete>
+      <fileset dir="${obj-dir}" includes="**/*.class" />
+    </delete>
+  </target>
+
+  <target name="jar" depends="compile, clean-jar">
+    <jar destfile="${lib-dir}/${jar-name}.jar"
+         basedir="${obj-dir}" />
+  </target>
+
+  <target name="clean-jar">
+    <delete file="${lib-jar}/${jar-name}.jar" />
+  </target>
+
+  <!--
+  <target name="run" depends="jar">
+    <java classname="${main-class}" fork="true">
+      <classpath>
+        <path refid="classpath"/>
+        <path location="${jar-name}.jar"/>
+      </classpath>
+      <arg line="../purchases4.txt"/>
+    </java>
+  </target>
+
+  <target name="all" depends="run"/>
+  -->
+
+  <target name="clean" depends="clean-init"/>
+</project>

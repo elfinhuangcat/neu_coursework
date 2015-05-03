@@ -1,0 +1,32 @@
+If you want to write your own program: 
+1. Please see the Javadoc in the "doc" folder.
+2. Your project should include lib/master.jar as the library package.
+3. You should have a configuration file similar to the one in Source_Code/configuration.
+4. Each line in the configuration file contains information about a node in the cluster:
+ID	IP address	port number	private key path	login user name	root directory(workspace)
+The ID of the master machine must be "MASTER".
+5. We recommend you use AWS EC2 AMI (Amazon Linux System) to run your program since we pass our tests on the AMI.
+6. We suggest you use same private key for all nodes in your cluster. And copying your jar file, the private key, input file and your configuration file to the master's workspace defined in configuration file is also recommended.
+7. slave.jar needs to be copied to all other nodes in the cluster.
+8. First you need to start the Listener program in slave nodes:
+  $ java -jar slave.jar
+9. Then you can run your jar file:
+  $ java -jar your_program.jar [arguments]
+
+If you want to test our demo program out:
+(We recommend you do this first)
+1. Modify the configuration file in Source_Codes/.
+2. In your terminal, cd to Source_Codes and run:
+  $ chmod a+rwx ./buildJars
+  $ ./buildJars
+  $ chmod a+rwx ./scpFilesWRTconfig
+  $ ./scpFilesWRTconfig
+3. You need to scp the private key to the master, for the master to scp files to slaves.
+  $ scp -i path/to/master_pkey.pem path/to/slave01_pkey.pem ec2-user@some.ip:workspace/slave01.pem
+4. Open terminals to ssh to the nodes:
+  $ ssh -i path/to/slave01_pkey.pem ec2-user@some.ip
+  ....
+5. Start the Listener program first:
+  $ java -jar slave.jar
+6. Start the user program:
+  $ java -jar user_test.jar configuration purs.txt outputdir user_test.jar

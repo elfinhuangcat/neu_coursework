@@ -1,0 +1,128 @@
+=== Run information ===
+
+Scheme:weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+Relation:     DATASET
+Instances:    846
+Attributes:   37
+              f0
+              f1
+              f2
+              f3
+              f4
+              f5
+              f6
+              f7
+              f8
+              f9
+              f10
+              f11
+              f12
+              f13
+              f14
+              f15
+              f16
+              f17
+              f18
+              f19
+              f20
+              f21
+              f22
+              f23
+              f24
+              f25
+              f26
+              f27
+              f28
+              f29
+              f30
+              f31
+              f32
+              f33
+              f34
+              f35
+              CLASS
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: car, noncar
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.1775 * (normalized) f0
+ +       0.9215 * (normalized) f1
+ +      -0.0831 * (normalized) f2
+ +      -0.1657 * (normalized) f3
+ +      -1.221  * (normalized) f4
+ +       0.1955 * (normalized) f5
+ +      -0.4268 * (normalized) f6
+ +      -3.809  * (normalized) f7
+ +       5.6174 * (normalized) f8
+ +      -0.095  * (normalized) f9
+ +      -0.7577 * (normalized) f10
+ +       0.1798 * (normalized) f11
+ +       0.1416 * (normalized) f12
+ +      -1.6069 * (normalized) f13
+ +       0.5951 * (normalized) f14
+ +       0.3614 * (normalized) f15
+ +      -1.6712 * (normalized) f16
+ +      -0.7005 * (normalized) f17
+ +       0.1907 * (normalized) f18
+ +       4.3637 * (normalized) f19
+ +       1.113  * (normalized) f20
+ +       0.377  * (normalized) f21
+ +      -0.6074 * (normalized) f22
+ +      -0.2758 * (normalized) f23
+ +      -0.023  * (normalized) f24
+ +      -0.3483 * (normalized) f25
+ +       6.4062 * (normalized) f26
+ +       0.1073 * (normalized) f27
+ +      -1.4101 * (normalized) f28
+ +      -0.0928 * (normalized) f29
+ +       0.0647 * (normalized) f30
+ +      -0.7321 * (normalized) f31
+ +       4.8225 * (normalized) f32
+ +      -0.1899 * (normalized) f33
+ +      -2.3474 * (normalized) f34
+ +      -0.0742 * (normalized) f35
+ -       1.7502
+
+Number of kernel evaluations: 150452 (81.758% cached)
+
+
+
+Time taken to build model: 0.17 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         717               84.7518 %
+Incorrectly Classified Instances       129               15.2482 %
+Kappa statistic                          0.6951
+Mean absolute error                      0.1525
+Root mean squared error                  0.3905
+Relative absolute error                 30.5024 %
+Root relative squared error             78.1054 %
+Total Number of Instances              846     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.83      0.134      0.864     0.83      0.847      0.848    car
+                 0.866     0.17       0.832     0.866     0.848      0.848    noncar
+Weighted Avg.    0.848     0.152      0.848     0.848     0.847      0.848
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 356  73 |   a = car
+  56 361 |   b = noncar
+
+

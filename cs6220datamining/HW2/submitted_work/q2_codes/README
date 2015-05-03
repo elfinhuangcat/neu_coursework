@@ -1,0 +1,10 @@
+How to run the codes for question 2:
+1. In Terminal, cd to q2_codes/.
+2. Make sure the data are unzipped and stay in q2_codes/hw2-data
+3. In Terminal, enter the command below to run the code:
+   $ python label_test_set.py
+4. The output is q2_codes/labeled-test.csv
+
+Output:
+The output file is labeled-test.csv, which contains the column "xi"
+(ExampleID).

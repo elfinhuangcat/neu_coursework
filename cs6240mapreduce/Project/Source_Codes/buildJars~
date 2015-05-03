@@ -1,0 +1,15 @@
+#! /bin/bash
+
+ant -f build-master.xml jar
+
+mkdir MapReduce_Project_Slave/lib/
+mkdir MapReduce_Project_UserTest/lib/
+
+cp master.jar ./MapReduce_Project_Slave/lib/master.jar
+cp master.jar ./MapReduce_Project_UserTest/lib/master.jar
+
+ant -f build-slave.xml jar
+ant -f build-user.xml jar
+
+rm -r *obj
+rm master.jar

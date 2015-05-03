@@ -1,0 +1,35 @@
+The program is tested on both Mac and Linux machines.
+To run the final procedure we adopted (c4.5 with AdaBoost):
+1. Unzip the data. The destination might be the "data" folder in this directory.
+   We are using the comma-separated training and testing files.
+2. Translate the training and testing files by:
+   (1) Open the terminal, cd to this directory.
+   (2) Run this command:
+   $ java -jar datamining.jar -arff ./data/census-income.data ./data/train.arff ./data/census-income.test ./data/test.arff
+   The arguments are
+   [0] "arff" - the option to translate the data
+   [1] training data path
+   [2] training arff destination path
+   [3] testing data path
+   [4] testing data destination path
+3. After you got the ARFF files, run the following command:
+   $ java -jar datamining.jar -boo -c45 ./data/train.arff ./data/test.arff
+   This will run the c45 with adaboost.
+4. If you want to try other options, you can run:
+   $ java -jar datamining.jar -bag <train_arff_path> <test_arff_path>
+   With "-bag" option it will runs the bagging procedure.
+
+   $ java -jar datamining.jar -boo <classifier> <train_arff_path> <test_arff_path>
+   With "-boo" option it will run the boosting on the base learner you input.
+   Valid options for <classifier> are:
+   [1] -c45    which is C4.5
+   [2] -knn    which is KNN
+   [3] -nb     which is Naive Bayes
+   [4] -nbt    which is NBTree
+
+
+Team members:
+Yaxin Huang huang.yax@husky.neu.edu
+Jalpan Randeri randeri.j@husky.neu.edu
+Rohit Vallu vallu.r@husky.neu.edu
+Nadim Mahesaniya mahesaniya.n@husky.neu.edu

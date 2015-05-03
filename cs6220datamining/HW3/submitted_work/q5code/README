@@ -1,0 +1,14 @@
+How to Run the Codes:
+1. In your terminal, cd to this directory, and run the following command:
+   $ python run.py > log.txt
+2. The plot1.png and sse_table will be regenerated.
+3. The other output of the program can be found in log.txt
+
+About the Codes:
+1. data_process.py is a module providing the method to read and handle 
+   the segment.arff.
+2. kmeans.py is a module providing methods to run k-means when given 
+   K and iteration number.
+3. run.py provides methods to run the required analysis over 12 Ks.
+4. tool_methods provides other methods will be used.
+

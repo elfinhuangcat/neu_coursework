@@ -1,0 +1,17 @@
+all s all r (Adjacent(s,r) <-> Adjacent(r,s)).
+%all s ((-W(s) & -P(s)) <-> Safe(s)).
+%all s (-Safe(s) <-> (W(s) | P(s))).
+%all s exists r (B(s) -> (Adjacent(r,s) & P(r))).
+%all s exists r (S(s) -> (Adjacent(r,s) & W(r))).
+%all s all r ((-B(s) & Adjacent(r,s)) -> -P(r)).
+%all s all r ((-S(s) & Adjacent(r,s)) -> -W(r)).
+%all s all r ((P(s) & Adjacent(r,s)) -> B(r)).
+%all s all r ((W(s) & Adjacent(r,s)) -> S(r)).
+
+all x ((-W(x) & -P(x)) <-> Safe(x)).
+all x exists y (B(x) -> (Adjacent(x,y) & P(y))).
+all x exists y (S(x) -> (Adjacent(x,y) & W(y))).
+all x all y ((-B(x) & Adjacent(x,y)) -> -P(y)).
+all x all y ((-S(x) & Adjacent(x,y)) -> -W(y)).
+all x all y ((P(x) & Adjacent(x,y)) -> B(y)).
+all x all y ((W(x) & Adjacent(x,y)) -> S(y)).

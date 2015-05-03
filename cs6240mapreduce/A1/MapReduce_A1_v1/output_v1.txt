@@ -1,0 +1,19 @@
+Category	Sale (Median)
+DVDs	250.53
+Video Games	249.45
+Baby	249.69
+Computers	250.15
+CDs	249.15
+Pet Supplies	249.52
+Garden	250.13
+Consumer Electronics	249.74
+Sporting Goods	250.54
+Crafts	249.84
+Men's Clothing	250.78
+Women's Clothing	249.54
+Books	249.27
+Cameras	249.275
+Music	249.67
+Toys	250.15
+Health and Beauty	250.5
+Children's Clothing	249.77

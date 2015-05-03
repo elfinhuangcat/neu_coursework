@@ -1,0 +1,5 @@
+MASTER	52.6.40.144	4444	yaxinkey.pem	ec2-user	/home/ec2-user/
+Slave01	52.6.125.237	4444	yaxinkey.pem	ec2-user	/home/ec2-user/
+Slave02	52.6.167.251	4444	yaxinkey.pem	ec2-user	/home/ec2-user/
+Slave03	52.6.99.168	4444	yaxinkey.pem	ec2-user	/home/ec2-user/
+Slave04	52.5.87.184	4444	yaxinkey.pem	ec2-user	/home/ec2-user/

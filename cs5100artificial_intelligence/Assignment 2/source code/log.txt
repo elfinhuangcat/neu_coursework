@@ -1,0 +1,1819 @@
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+Infer result: (2,2) is safe.
+At (1,2).
+Move to (2,2).
+Infer result: (3,2) is safe.
+Infer result: (2,3) is safe.
+At (2,2).
+Infer result: (2,3) is safe.
+Move to (2,3).
+Stench in (2,3).
+Breeze in (2,3).
+Glitter in (2,3).
+At (2,3).
+Gold picked up.
+Move to (2,2).
+Move to (3,2).
+Breeze in (3,2).
+At (3,2).
+Wumpus found: (1, 3)
+Move to (2,2).
+Move to (1,2).
+Shoot towards north.
+Wumpus killed.
+Move to (1,1).
+Final Score: 890
+Total Gold Number: 1
+Remain Gold Number: 0
+Remain Arrow Number: 1
+Total Moves: 10
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Stench in (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+At (1,2).
+Wumpus found: (2, 2)
+Shoot towards east.
+Wumpus killed.
+Move to (1,1).
+Final Score: -104
+Total Gold Number: 2
+Remain Gold Number: 2
+Remain Arrow Number: 1
+Total Moves: 4
+Final Score: -103
+Total Gold Number: 2
+Remain Gold Number: 2
+Remain Arrow Number: 1
+Total Moves: 3
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Stench in (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+At (1,2).
+Wumpus found: (2, 2)
+Shoot towards east.
+Wumpus killed.
+At (1,2).
+Search for gold ends.
+Move to (1,1).
+Final Score: -104
+Total Gold Number: 2
+Remain Gold Number: 2
+Remain Arrow Number: 1
+Total Moves: 4
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Stench in (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+At (1,2).
+Wumpus found: (2, 2)
+Shoot towards east.
+Wumpus killed.
+At (1,2).
+Search for gold ends.
+Move to (1,1).
+Final Score: -104
+Total Gold Number: 2
+Remain Gold Number: 2
+Remain Arrow Number: 1
+Total Moves: 4
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Stench in (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+At (1,2).
+Wumpus found: (2, 2)
+Shoot towards east.
+Wumpus killed.
+At (1,2).
+Move to (1,1).
+Move to (2,1).
+At (2,1).
+Search for gold ends.
+Move to (1,1).
+Final Score: -106
+Total Gold Number: 2
+Remain Gold Number: 2
+Remain Arrow Number: 1
+Total Moves: 6
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Stench in (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+At (1,2).
+Wumpus found: (2, 2)
+Shoot towards east.
+Wumpus killed.
+At (1,2).
+Move to (1,1).
+Move to (2,1).
+At (2,1).
+Move to (1,1).
+Final Score: -106
+Total Gold Number: 2
+Remain Gold Number: 2
+Remain Arrow Number: 1
+Total Moves: 6
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Stench in (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+At (1,2).
+Wumpus found: (2, 2)
+Shoot towards east.
+Wumpus killed.
+At (1,2).
+Move to (1,1).
+Move to (2,1).
+At (2,1).
+Move to (1,1).
+Final Score: -106
+Total Gold Number: 2
+Remain Gold Number: 2
+Remain Arrow Number: 1
+Total Moves: 6
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Stench in (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+At (1,2).
+Wumpus found: (2, 2)
+Shoot towards east.
+Wumpus killed.
+At (1,2).
+Move to (1,1).
+Move to (2,1).
+At (2,1).
+Move to (1,1).
+Final Score: -106
+Total Gold Number: 2
+Remain Gold Number: 2
+Remain Arrow Number: 1
+Total Moves: 6
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Stench in (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+At (1,2).
+Wumpus found: (2, 2)
+Shoot towards east.
+Wumpus killed.
+At (1,2).
+Infer result: (2,2) is safe.
+Infer result: (1,3) is safe.
+Move to (1,1).
+Move to (2,1).
+Infer result: (1,3) is safe.
+At (2,1).
+Infer result: (1,3) is safe.
+Move to (1,1).
+Move to (1,2).
+Move to (1,3).
+Infer result: (2,3) is safe.
+Infer result: (1,4) is safe.
+At (1,3).
+Infer result: (1,4) is safe.
+Move to (1,4).
+Infer result: (2,4) is safe.
+At (1,4).
+Infer result: (2,4) is safe.
+Move to (2,4).
+Infer result: (3,4) is safe.
+At (2,4).
+Infer result: (3,4) is safe.
+Move to (3,4).
+Breeze in (3,4).
+At (3,4).
+Move to (2,4).
+Move to (2,3).
+Breeze in (2,3).
+Glitter in (2,3).
+At (2,3).
+Gold picked up.
+Move to (2,2).
+Infer result: (3,2) is safe.
+At (2,2).
+Move to (3,2).
+Breeze in (3,2).
+Glitter in (3,2).
+At (3,2).
+Gold picked up.
+Move to (2,2).
+Move to (1,2).
+Move to (1,1).
+Final Score: 1882
+Total Gold Number: 2
+Remain Gold Number: 0
+Remain Arrow Number: 1
+Total Moves: 18
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Stench in (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+At (1,2).
+Wumpus found: (2, 2)
+Shoot towards east.
+Wumpus killed.
+At (1,2).
+Infer result: (2,2) is safe.
+Infer result: (1,3) is safe.
+Move to (1,1).
+Move to (2,1).
+Infer result: (1,3) is safe.
+At (2,1).
+Infer result: (1,3) is safe.
+Move to (1,1).
+Move to (1,2).
+Move to (1,3).
+Infer result: (2,3) is safe.
+Infer result: (1,4) is safe.
+At (1,3).
+Infer result: (1,4) is safe.
+Move to (1,4).
+Infer result: (2,4) is safe.
+At (1,4).
+Infer result: (2,4) is safe.
+Move to (2,4).
+Infer result: (3,4) is safe.
+At (2,4).
+Infer result: (3,4) is safe.
+Move to (3,4).
+Breeze in (3,4).
+At (3,4).
+Move to (2,4).
+Move to (2,3).
+Breeze in (2,3).
+Glitter in (2,3).
+At (2,3).
+Gold picked up.
+Move to (2,2).
+Infer result: (3,2) is safe.
+At (2,2).
+Move to (3,2).
+Breeze in (3,2).
+Glitter in (3,2).
+At (3,2).
+Gold picked up.
+Move to (2,2).
+Move to (1,2).
+Move to (1,1).
+Final Score: 1882
+Total Gold Number: 2
+Remain Gold Number: 0
+Remain Arrow Number: 1
+Total Moves: 18
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Stench in (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+At (1,2).
+Wumpus found: (2, 2)
+Shoot towards east.
+Wumpus killed.
+At (1,2).
+Infer result: (2,2) is safe.
+Infer result: (1,3) is safe.
+Move to (1,1).
+Move to (2,1).
+Infer result: (1,3) is safe.
+At (2,1).
+Infer result: (1,3) is safe.
+Move to (1,1).
+Move to (1,2).
+Move to (1,3).
+Infer result: (2,3) is safe.
+Infer result: (1,4) is safe.
+At (1,3).
+Infer result: (1,4) is safe.
+Move to (1,4).
+Infer result: (2,4) is safe.
+At (1,4).
+Infer result: (2,4) is safe.
+Move to (2,4).
+Infer result: (3,4) is safe.
+At (2,4).
+Infer result: (3,4) is safe.
+Move to (3,4).
+Breeze in (3,4).
+At (3,4).
+Move to (2,4).
+Move to (2,3).
+Breeze in (2,3).
+Glitter in (2,3).
+At (2,3).
+Gold picked up.
+Move to (2,2).
+Infer result: (3,2) is safe.
+At (2,2).
+Move to (3,2).
+Breeze in (3,2).
+Glitter in (3,2).
+At (3,2).
+Gold picked up.
+Move to (2,2).
+Move to (1,2).
+Move to (1,1).
+Final Score: 1882
+Total Gold Number: 2
+Remain Gold Number: 0
+Remain Arrow Number: 1
+Total Moves: 18
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Stench in (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+At (1,2).
+Wumpus found: (2, 2)
+Shoot towards east.
+Wumpus killed.
+At (1,2).
+Infer result: (2,2) is safe.
+Infer result: (1,3) is safe.
+Move to (1,1).
+Move to (2,1).
+Infer result: (1,3) is safe.
+At (2,1).
+Infer result: (1,3) is safe.
+Move to (1,1).
+Move to (1,2).
+Move to (1,3).
+Infer result: (2,3) is safe.
+Infer result: (1,4) is safe.
+At (1,3).
+Infer result: (1,4) is safe.
+Move to (1,4).
+Infer result: (2,4) is safe.
+At (1,4).
+Infer result: (2,4) is safe.
+Move to (2,4).
+Infer result: (3,4) is safe.
+At (2,4).
+Infer result: (3,4) is safe.
+Move to (3,4).
+Breeze in (3,4).
+At (3,4).
+Move to (2,4).
+Move to (2,3).
+Breeze in (2,3).
+Glitter in (2,3).
+At (2,3).
+Gold picked up.
+Move to (2,2).
+Infer result: (3,2) is safe.
+At (2,2).
+Move to (3,2).
+Breeze in (3,2).
+Glitter in (3,2).
+At (3,2).
+Gold picked up.
+Move to (2,2).
+Move to (1,2).
+Move to (1,1).
+Final Score: 1882
+Total Gold Number: 2
+Remain Gold Number: 0
+Remain Arrow Number: 1
+Total Moves: 18
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+Infer result: (2,2) is safe.
+At (1,2).
+Move to (2,2).
+Infer result: (3,2) is safe.
+Infer result: (2,3) is safe.
+At (2,2).
+Infer result: (2,3) is safe.
+Move to (2,3).
+Stench in (2,3).
+Breeze in (2,3).
+Glitter in (2,3).
+At (2,3).
+Gold picked up.
+Move to (2,2).
+Move to (3,2).
+Breeze in (3,2).
+At (3,2).
+Wumpus found: (1, 3)
+Move to (2,2).
+Move to (1,2).
+Shoot towards north.
+Wumpus killed.
+At (1,2).
+Infer result: (1,3) is safe.
+Move to (1,3).
+Infer result: (1,4) is safe.
+Move to (2,3).
+At (2,3).
+Move to (1,3).
+Move to (1,4).
+Infer result: (2,4) is safe.
+At (1,4).
+Move to (2,4).
+Infer result: (3,4) is safe.
+At (2,4).
+Move to (3,4).
+Breeze in (3,4).
+At (3,4).
+Move to (2,4).
+Move to (1,4).
+Move to (1,3).
+Move to (1,2).
+Move to (1,1).
+Final Score: 880
+Total Gold Number: 1
+Remain Gold Number: 0
+Remain Arrow Number: 1
+Total Moves: 20
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+Infer result: (2,2) is safe.
+At (1,2).
+Move to (2,2).
+Infer result: (3,2) is safe.
+Infer result: (2,3) is safe.
+At (2,2).
+Infer result: (2,3) is safe.
+Move to (2,3).
+Stench in (2,3).
+Breeze in (2,3).
+Glitter in (2,3).
+At (2,3).
+Gold picked up.
+Move to (2,2).
+Move to (3,2).
+Breeze in (3,2).
+At (3,2).
+Wumpus found: (1, 3)
+Move to (2,2).
+Move to (1,2).
+Shoot towards north.
+Wumpus killed.
+At (1,2).
+Infer result: (1,3) is safe.
+Move to (1,3).
+Infer result: (1,4) is safe.
+Move to (2,3).
+At (2,3).
+Move to (1,3).
+Move to (1,4).
+Infer result: (2,4) is safe.
+At (1,4).
+Move to (2,4).
+Infer result: (3,4) is safe.
+At (2,4).
+Move to (3,4).
+Breeze in (3,4).
+At (3,4).
+Move to (2,4).
+Move to (1,4).
+Move to (1,3).
+Move to (1,2).
+Move to (1,1).
+Final Score: 880
+Total Gold Number: 1
+Remain Gold Number: 0
+Remain Arrow Number: 0
+Total Moves: 20
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Breeze in (2,1).
+At (2,1).
+Move to (1,1).
+At (1,1).
+Move to (1,2).
+Stench in (1,2).
+Infer result: (2,2) is safe.
+At (1,2).
+Move to (2,2).
+Infer result: (3,2) is safe.
+Infer result: (2,3) is safe.
+At (2,2).
+Infer result: (2,3) is safe.
+Move to (2,3).
+Stench in (2,3).
+Glitter in (2,3).
+At (2,3).
+Gold picked up.
+Move to (2,2).
+Move to (3,2).
+Breeze in (3,2).
+Infer result: (3,3) is safe.
+At (3,2).
+Move to (3,3).
+At (3,3).
+Wumpus found: (1, 3)
+Move to (3,2).
+Move to (2,2).
+Move to (1,2).
+Move to (1,1).
+Final Score: 988
+Total Gold Number: 1
+Remain Gold Number: 0
+Remain Arrow Number: 1
+Total Moves: 12
+******************Start the game******************
+Now the agent is exploring for gold.
+At (1,1).
+Infer result: (1,2) is safe.
+Infer result: (2,1) is safe.
+Move to (2,1).
+Infer result: (3,1) is safe.
+Infer result: (2,2) is safe.
+At (2,1).
+Infer result: (3,1) is safe.
+Infer result: (2,2) is safe.
+Move to (2,2).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (2,3) is safe.
+At (2,2).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Move to (2,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (2,4) is safe.
+Infer result: (1,3) is safe.
+Infer result: (3,3) is safe.
+At (2,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Move to (3,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (3,4) is safe.
+Infer result: (4,3) is safe.
+At (3,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (4,3) is safe.
+Move to (4,3).
+Breeze in (4,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+At (4,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Move to (3,3).
+Move to (3,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (4,4) is safe.
+Infer result: (3,5) is safe.
+At (3,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Move to (3,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (4,5) is safe.
+Infer result: (2,5) is safe.
+Infer result: (3,6) is safe.
+At (3,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,5) is safe.
+Move to (3,6).
+Breeze in (3,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,5) is safe.
+At (3,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,5) is safe.
+Move to (3,5).
+Move to (2,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,6) is safe.
+Infer result: (1,5) is safe.
+At (2,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Move to (1,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (1,6) is safe.
+Infer result: (1,4) is safe.
+At (1,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (1,4) is safe.
+Move to (1,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+At (1,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Move to (1,5).
+Move to (1,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (1,7) is safe.
+At (1,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Move to (1,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,7) is safe.
+Infer result: (1,8) is safe.
+At (1,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (1,8) is safe.
+Move to (1,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (1,9) is safe.
+At (1,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Move to (1,9).
+Glitter in (1,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (2,9) is safe.
+At (1,9).
+Gold picked up.
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Move to (2,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (3,9) is safe.
+At (2,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Move to (3,9).
+Glitter in (3,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (3,8) is safe.
+Infer result: (4,9) is safe.
+At (3,9).
+Gold picked up.
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (4,9) is safe.
+Move to (4,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (4,8) is safe.
+At (4,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Move to (4,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (4,7) is safe.
+Infer result: (5,8) is safe.
+At (4,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,8) is safe.
+Move to (5,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,8) is safe.
+At (5,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Move to (6,8).
+Glitter in (6,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (7,8) is safe.
+Infer result: (6,9) is safe.
+Infer result: (6,7) is safe.
+At (6,8).
+Gold picked up.
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Move to (6,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (7,7) is safe.
+Infer result: (6,6) is safe.
+At (6,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (6,6) is safe.
+Move to (6,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (7,6) is safe.
+Infer result: (6,5) is safe.
+At (6,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (6,5) is safe.
+Move to (6,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (6,4) is safe.
+Infer result: (7,5) is safe.
+Infer result: (5,5) is safe.
+At (6,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (6,4) is safe.
+Infer result: (5,5) is safe.
+Move to (5,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (6,4) is safe.
+Infer result: (5,4) is safe.
+At (5,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (6,4) is safe.
+Infer result: (5,4) is safe.
+Move to (5,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (6,4) is safe.
+At (5,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (6,4) is safe.
+Move to (6,4).
+Stench in (6,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (7,5) is safe.
+Move to (6,5).
+Move to (7,5).
+Stench in (7,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+At (7,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Move to (7,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (8,6) is safe.
+At (7,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Move to (8,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (8,5) is safe.
+Infer result: (9,6) is safe.
+Infer result: (8,7) is safe.
+At (8,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,6) is safe.
+Move to (8,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,6) is safe.
+Infer result: (8,8) is safe.
+Infer result: (9,7) is safe.
+At (8,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,6) is safe.
+Infer result: (9,7) is safe.
+Move to (9,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,6) is safe.
+Infer result: (9,8) is safe.
+At (9,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,6) is safe.
+Infer result: (9,8) is safe.
+Move to (9,8).
+Breeze in (9,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,6) is safe.
+At (9,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,6) is safe.
+Move to (8,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,6) is safe.
+Infer result: (8,9) is safe.
+At (8,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,6) is safe.
+Move to (8,9).
+Breeze in (8,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,6) is safe.
+At (8,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,6) is safe.
+Move to (8,8).
+Move to (8,7).
+Move to (8,6).
+Move to (9,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,5) is safe.
+At (9,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Move to (9,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,4) is safe.
+At (9,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Move to (9,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,3) is safe.
+Infer result: (8,4) is safe.
+At (9,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (8,4) is safe.
+Move to (8,4).
+Stench in (8,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+At (8,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Move to (9,4).
+Move to (9,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (8,3) is safe.
+Infer result: (9,2) is safe.
+At (9,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (9,2) is safe.
+Move to (9,2).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (8,2) is safe.
+Infer result: (9,1) is safe.
+At (9,2).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (8,2) is safe.
+Move to (9,1).
+Glitter in (9,1).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (8,2) is safe.
+Infer result: (8,1) is safe.
+At (9,1).
+Gold picked up.
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (8,2) is safe.
+Move to (8,1).
+Breeze in (8,1).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (8,2) is safe.
+At (8,1).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (8,2) is safe.
+Move to (8,2).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (7,2) is safe.
+At (8,2).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Move to (7,2).
+Breeze in (7,2).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+At (7,2).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Move to (8,2).
+Move to (8,3).
+Glitter in (8,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Infer result: (7,3) is safe.
+At (8,3).
+Gold picked up.
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Move to (7,3).
+Stench in (7,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+At (7,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Move to (8,3).
+Move to (8,4).
+Move to (8,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+At (8,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Infer result: (5,6) is safe.
+Move to (7,5).
+Move to (6,5).
+Move to (5,5).
+Move to (5,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+At (5,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Move to (6,6).
+Move to (6,7).
+Move to (7,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+At (7,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (6,9) is safe.
+Move to (6,7).
+Move to (6,8).
+Move to (6,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Infer result: (7,9) is safe.
+At (6,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Move to (7,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+At (7,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Move to (7,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+At (7,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Infer result: (5,7) is safe.
+Move to (6,8).
+Move to (5,8).
+Move to (5,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+At (5,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Move to (4,7).
+Breeze in (4,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+At (4,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Infer result: (5,9) is safe.
+Move to (4,8).
+Move to (5,8).
+Move to (5,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+At (5,9).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Move to (5,8).
+Move to (4,8).
+Move to (3,8).
+Breeze in (3,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+At (3,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Infer result: (2,8) is safe.
+Move to (2,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+At (2,8).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Move to (2,7).
+Breeze in (2,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+At (2,7).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Infer result: (4,6) is safe.
+Move to (2,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Move to (3,6).
+Move to (4,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+At (4,6).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Move to (4,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+At (4,5).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (5,3) is safe.
+Move to (5,5).
+Move to (5,4).
+Move to (5,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (6,3) is safe.
+Infer result: (5,2) is safe.
+At (5,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Move to (5,2).
+Breeze in (5,2).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+At (5,2).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Move to (5,3).
+Move to (6,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (6,2) is safe.
+At (6,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Move to (6,2).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Infer result: (6,1) is safe.
+At (6,2).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Move to (6,1).
+Breeze in (6,1).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+At (6,1).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Move to (6,2).
+Move to (6,3).
+Move to (5,3).
+Move to (5,4).
+Move to (4,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+At (4,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Infer result: (1,3) is safe.
+Move to (3,4).
+Move to (2,4).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Move to (1,4).
+Move to (1,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+At (1,3).
+Infer result: (3,1) is safe.
+Infer result: (3,2) is safe.
+Move to (2,3).
+Move to (3,3).
+Move to (3,2).
+Breeze in (3,2).
+Infer result: (3,1) is safe.
+At (3,2).
+Infer result: (3,1) is safe.
+Move to (3,1).
+Infer result: (4,1) is safe.
+Move to (2,1).
+Move to (1,1).
+At (1,1).
+Move to (2,1).
+Move to (3,1).
+Move to (4,1).
+Breeze in (4,1).
+At (4,1).
+Move to (3,1).
+Move to (2,1).
+Move to (1,1).
+Move to (1,2).
+At (1,2).
+Wumpus found: (7, 4)
+Move to (1,3).
+Move to (1,4).
+Move to (1,5).
+Move to (1,6).
+Move to (1,7).
+Move to (1,8).
+Move to (1,9).
+Final Score: 4876
+Total Gold Number: 5
+Remain Gold Number: 0
+Remain Arrow Number: 1
+Total Moves: 124

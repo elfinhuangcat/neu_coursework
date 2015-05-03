@@ -1,0 +1,36 @@
+#!/bin/sh
+# Assuming:
+#  (a) You have already ssh to the localhost.
+#  (b) You have set $HADOOP_HOME in your ~/.bashrc.
+# 1. Clean the possible previous-created files and directories:
+cd MapReduce_A1_v3
+rm -r output
+rm -r temp_output
+ant -f build.xml clean-init
+ant -f build.xml clean-compile
+ant -f build.xml clean-jar
+
+# 2. Complie and run the v3 program:
+ant -f build.xml compile jar
+
+# 3. Copy the jar to the same directory as input file
+cp lib/MapReduce_A1_v3.jar ../MapReduce_A1_v3.jar
+cd ..
+
+#----------BUILD JAR COMPLETE--------------#
+# 4. Format the HDFS file system:
+$HADOOP_HOME/bin/hdfs namenode -format
+# 5. Start NameNode daemon and DataNode daemon:
+config=$(pwd)/pseudo-distributed-config
+$HADOOP_HOME/sbin/start-dfs.sh --config $config
+# 6. Make the HDFS directories and copy the input file:
+hadoop fs -mkdir /tmp
+hadoop fs -copyFromLocal purchases4.txt /tmp
+
+# 7. Using hadoop to run
+hadoop jar MapReduce_A1_v3.jar \
+MedianOfPurchases /tmp/purchases4.txt
+# The output folder should resides in MapReduce_A1_v3
+
+# 8. Remove the intermediate jar:
+rm MapReduce_A1_v3.jar

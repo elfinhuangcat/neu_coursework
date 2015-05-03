@@ -1,0 +1,57 @@
+final version 2.1's result:
+---wumpus_world_fixed.txt--- (This is the map trigger the bug in version 2.0)
+Final Score: 1882
+Total Gold Number: 2
+Remain Gold Number: 0
+Remain Arrow Number: 0
+Total Moves: 18
+
+---wumpus_world_m44.txt---
+Final Score: 880
+Total Gold Number: 1
+Remain Gold Number: 0
+Remain Arrow Number: 0
+Total Moves: 20
+
+---map2.txt---
+Final Score: 988
+Total Gold Number: 1
+Remain Gold Number: 0
+Remain Arrow Number: 1
+Total Moves: 12
+
+--map1.txt---
+Final Score: 4876
+Total Gold Number: 5
+Remain Gold Number: 0
+Remain Arrow Number: 1
+Total Moves: 124
+=========================
+buggy version 2.0's result:
+---map2.txt---
+Final Score: 990
+Total Gold Number: 1
+Remain Gold Number: 0
+Remain Arrow Number: 1
+Total Moves: 12
+
+--map1.txt---
+Final Score: 4876
+Total Gold Number: 5
+Remain Gold Number: 0
+Remain Arrow Number: 1
+Total Moves: 124
+
+=========================
+
+TA's result:
+---map2.txt---
+Gold score = 1000
+Total moves made = 12
+Total score = 988
+
+
+--map1.txt---
+Gold score = 5000
+Total moves made = 272
+Total score = 4728

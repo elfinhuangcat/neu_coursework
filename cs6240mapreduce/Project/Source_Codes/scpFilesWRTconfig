@@ -1,0 +1,27 @@
+#!/bin/bash
+# This script helps scp files from your machine to the ec2 machines.
+# You need to have "configuration" file ready.
+IFS=$'\t'
+MASTER="MASTER"
+while read NAME IPADDR PORT KEYPATH USER ROOTDIR; do
+  if [ $NAME == $MASTER ]
+  then 
+    #You need to copy the private key(s) on your own.
+    # copy the user_test.jar (Our demo jar)
+    scp -i $KEYPATH -o "StrictHostKeyChecking no" user_test.jar $USER@$IPADDR:$ROOTDIR/user_test.jar
+    # copy the input file (purs.txt is the demo input file)
+    scp -i $KEYPATH -o "StrictHostKeyChecking no" purs.txt $USER@$IPADDR:$ROOTDIR/purs.txt
+    # copy the configuration file
+    scp -i $KEYPATH -o "StrictHostKeyChecking no" configuration $USER@$IPADDR:$ROOTDIR/configuration
+  else
+    # copy the slave.jar (listener program)
+    scp -i $KEYPATH -o "StrictHostKeyChecking no" slave.jar $USER@$IPADDR:$ROOTDIR/slave.jar
+    # And invoke them:
+    # ssh -i $KEYPATH -o "StrictHostKeyChecking no" $USER@$IPADDR
+    # cd $ROOTDIR
+    # java -jar slave.jar
+    # exit
+  fi
+done < configuration
+
+  #echo "NAME=$NAME IPADDR=$IPADDR PORT=$PORT KEYPATH=$KEYPATH USER=$USER ROOTDIR=$ROOTDIR"

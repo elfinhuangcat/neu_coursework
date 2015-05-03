@@ -1,0 +1,61 @@
+<!-- This build.xml format comes from: --> 
+<!-- http://oak.cs.ucla.edu/cs144/projects/ant/tutorial.html -->
+<project default="all">
+  <property name="obj-dir" location="master-obj" />
+  <property name="lib-dir" location="MapReduce_Project_Master/lib" />
+  <property name="src-dir" location="MapReduce_Project_Master/src" />
+  <property name="jar-name" value="master" />
+  <path id="classpath">
+    <fileset dir="${lib-dir}" includes="**/*.jar"/>
+  </path>
+
+  <target name="init">
+    <mkdir dir="${obj-dir}" />
+  </target>
+
+  <target name="clean-init">
+    <delete dir="${obj-dir}" />
+  </target>
+
+  <target name="compile" depends="init">
+    <javac srcdir="${src-dir}" 
+           destdir="${obj-dir}" 
+           classpathref="classpath" />
+  </target>
+
+  <target name="clean-compile">
+    <delete>
+      <fileset dir="${obj-dir}" includes="**/*.class" />
+    </delete>
+  </target>
+
+  <target name="jar" depends="compile">
+    <jar destfile="${jar-name}.jar"
+         basedir="${obj-dir}">
+      <manifest>
+        <attribute name="Main-Class" value="${main-class}"/>
+      </manifest>
+      <zipgroupfileset dir="${lib-dir}" includes="**/*.jar"/>
+    </jar>
+  </target>
+
+  <target name="clean-jar">
+    <delete file="${jar-name}.jar" />
+  </target>
+
+  <target name="clean" depends="clean-jar,clean-compile,clean-init"/>
+
+  <!--
+  <target name="run" depends="jar">
+    <java classname="${main-class}" fork="true">
+      <classpath>
+        <path refid="classpath"/>
+        <path location="${jar-name}.jar"/>
+      </classpath>
+      <arg line="../purchases4.txt"/>
+    </java>
+  </target>
+
+  <target name="all" depends="run"/>
+  -->
+</project>

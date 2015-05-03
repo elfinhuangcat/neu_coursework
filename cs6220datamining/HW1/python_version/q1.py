@@ -1,0 +1,150 @@
+# -*- coding: utf-8 -*-
+"""
+Implement L2 regularized linear regression algorithm with 
+Lamda ranging from 0 to 150 (integers only)
+For each of the 6 dataset, plot both the training set MSE 
+and the test set MSE as a function of λ (x-axis) in one graph.
+"""
+
+import numpy as np
+import csv
+import os
+import matplotlib.pyplot as plt
+import pylab
+import sys
+
+def read_csv_file(inputpath):
+    """
+    Given: The input csv file path (with the first row as headers)
+           nrow: the number of rows in file (Except header)
+           ncol: the number of feature in file (Except the label column)
+    Returns: A matrix storing the data.
+    """    
+    return np.genfromtxt(inputpath, delimiter=',', skip_header=1)
+
+def solve_with_penalty(datamatrix,lamda):
+    """
+    L2 Regularization close form.
+    Given:
+    X - a rows * (b+1) cols
+    lamda: An integer
+    Returns: W (b rows * 1 column)
+    """
+    nrow = len(datamatrix)
+    ncol = datamatrix.shape[1]
+    X = np.append(datamatrix[:, :-1], np.ones((nrow, 1)), axis = 1)
+    Y = datamatrix[:,-1]
+    # numpy.linalg.pinv (pseudo inverse)
+    ### ginv(t(X) %*% X + lamda * diag(ncol(X))) %*% t(X) %*% Y
+    temp1 = np.dot(X.T, X) + lamda * np.identity(X.shape[1])
+    temp2 = np.dot(np.linalg.pinv(temp1), X.T)
+    return np.dot(temp2, Y)
+
+        
+def mean_square_error(datamatrix, W):
+    """
+    This function is used to compute train/test MSE.
+    Given: 
+    # datamatrix: a rows * (b+1) cols
+    # W: The fitted parameters for the linear regression. b rows * 1 col.
+    Returns:
+    The mean square error given W to this data set.
+    """
+    # numpy.linalg.norm(x, ord=None, axis=None)[source] <matrix norm>
+    X = np.append(datamatrix[:,:-1], np.ones((len(datamatrix), 1)), axis=1)
+    temp1 = np.subtract(np.dot(X, W), datamatrix[:,-1])
+    return np.linalg.norm(temp1) ** 2 / len(datamatrix)
+
+def test_lamda(trainmx, testmx):
+    """
+    ## This function takes the training and testing data frame and use the L2
+    ## regularized linear regression to compute the W. For each loop, the 
+    ## training error and testing error will be computed and the function will 
+    ## output the graph as png files.
+    ## Given: Training data matrix and Testing data matrix,
+    ##        where the last column is the label values.
+    ## Returns: A matrix where the first row is Training MSE and second is 
+    ##          Testing MSE.
+    """
+    mse = np.zeros((2, 151))
+    for lamda in range(151):
+        W = solve_with_penalty(trainmx, lamda)
+        # Train MSE: 
+        mse[0,lamda] = mean_square_error(trainmx, W)
+        # Test MSE:
+        mse[1,lamda] = mean_square_error(testmx, W)
+    return mse
+
+def draw_plot(mse, fileName):
+    plt.plot(range(mse.shape[1]), mse[0,:], 'r-', range(mse.shape[1]), mse[1,:], 'b-')
+    plt.xlabel('Lambda')
+    plt.ylabel('Mean Square Error')
+    pylab.savefig(fileName, bbox_inches='tight')
+    plt.close()
+
+def log_lamda_mse(mse, trainsetName):
+    """
+    This function helps log the result of best lamda and the corresponding 
+    test set MSE.
+    """
+    minDist = sys.maxint
+    minInd = 0
+    for i in range(mse.shape[1]):
+        if abs(mse[0,i] - mse[1,i]) < minDist:
+            minInd = i
+            minDist = abs(mse[0,i] - mse[1,i])
+    print('Best Lambda for ' + trainsetName + ': ' + str(minInd))
+    log.write('Best Lambda for ' + trainsetName + ': ' + str(minInd) + '\n')
+    print('Test MSE: ' + str(mse[1,minInd]))
+    log.write('Test MSE: ' + str(mse[1,minInd]) + '\n\n')
+
+
+if __name__ == '__main__':
+    MH50_100_TRAIN = read_csv_file('input_data/50(1000)_100_train.csv')
+    MH100_100_TRAIN = read_csv_file('input_data/100(1000)_100_train.csv')
+    MH150_100_TRAIN = read_csv_file('input_data/150(1000)_100_train.csv')
+    M1000_100_TRAIN = read_csv_file('input_data/train-1000-100.csv')
+    M100_10_TRAIN = read_csv_file('input_data/train-100-10.csv')
+    M100_100_TRAIN = read_csv_file('input_data/train-100-100.csv')
+    
+    M100_10_TEST = read_csv_file('input_data/test-100-10.csv')
+    M100_100_TEST = read_csv_file('input_data/test-100-100.csv')
+    M1000_100_TEST = read_csv_file('input_data/test-1000-100.csv')
+    
+    # Create the directory to store the graphs:
+    if not os.path.exists('pic'):
+        os.makedirs('pic')
+    if not os.path.exists('pic/q1'):
+        os.makedirs('pic/q1')
+    if not os.path.exists('pic/q2'):
+        os.makedirs('pic/q2')
+    if not os.path.exists('log'):
+        os.makedirs('log')
+
+    log = open('log/log_q1.txt', 'w')    
+    
+    # Q1: For each pair, plot the MSE graph:
+
+    mse = test_lamda(MH50_100_TRAIN, M1000_100_TEST)
+    draw_plot(mse, 'pic/q1/h50_100.png')
+    log_lamda_mse(mse, 'H50_100_TRAIN')
+    
+    mse = test_lamda(MH100_100_TRAIN, M1000_100_TEST)
+    draw_plot(mse, 'pic/q1/h100_100.png')
+    log_lamda_mse(mse, 'H100_100_TRAIN')
+
+    mse = test_lamda(MH150_100_TRAIN, M1000_100_TEST)
+    draw_plot(mse, 'pic/q1/h150_100.png')
+    log_lamda_mse(mse, 'H150_100_TRAIN')
+
+    mse = test_lamda(M1000_100_TRAIN, M1000_100_TEST)
+    draw_plot(mse, 'pic/q1/1000_100.png')
+    log_lamda_mse(mse, '1000_100_TRAIN')
+
+    mse = test_lamda(M100_10_TRAIN, M100_10_TEST)
+    draw_plot(mse, 'pic/q1/100_10.png')
+    log_lamda_mse(mse, '100_10_TRAIN')
+
+    mse = test_lamda(M100_100_TRAIN, M100_100_TEST)
+    draw_plot(mse, 'pic/q1/100_100.png')
+    log_lamda_mse(mse, '100_100_TRAIN')

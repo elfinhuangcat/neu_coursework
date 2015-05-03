@@ -1,0 +1,132 @@
+# -*- coding: utf-8 -*-
+"""
+This file provides methods to read the training file of HW2_Q2.
+"""
+
+import numpy as np
+
+class TrainingInfo:
+    """ This is a class where an instance of it contains the information 
+        read from the training data file."""
+    def __init__(self, file_path):
+        self.CLASS_LABELS = list() # A list of class labels.
+        self.FEATURE_NUM = 0
+        self.TRAIN_DATA = list() # At last it will be an ARRAY!!
+        # NORMALIZE_PARAS: key = feature index; value = (mean, std)
+        self.NORMALIZE_PARAS = dict()
+        self.read_train_set(file_path)
+    
+    def get_CLASS_LABELS(self):
+        return self.CLASS_LABELS
+    def get_FEATURE_NUM(self):
+        return self.FEATURE_NUM
+    def get_TRAIN_DATA(self):
+        return self.TRAIN_DATA
+    def get_NORMALIZE_PARAS(self):
+        return self.NORMALIZE_PARAS
+    
+    def read_train_set(self, file_path):
+        """
+        Read from the training data set(.arff)
+        Given: The file path to the training.arff file.
+        Returns: None
+        Effect: Sets the CLASS_LABELS (A dictionary of labels)
+            Sets the FEATURE_NUM (Number of features)
+            Sets the TRAIN_DATA (A numpy array, where the last
+            column is the labels)
+            Sets the NORMALIZE_PARAS (Normalization parameters)
+        """
+        train_file = open(file_path, 'r')
+
+        # Read the class labels:
+        line = train_file.readline()
+        while 'CLASS_LABEL' not in line:
+            if '@attribute' in line:
+                # Count number of features:
+                self.FEATURE_NUM += 1
+            line = train_file.readline()
+
+        # Now line contains 'CLASS_LABEL':
+        self.set_class_labels(line) # Update the CLASS_LABELS constant.
+
+        # Look for the training set data:
+        while '@data' not in line:
+            line = train_file.readline()
+
+        # Build the training set ARRAY:
+        for line in train_file:
+            self.TRAIN_DATA.append(self.parse_train_point(line))
+
+        train_file.close()
+        self.TRAIN_DATA = np.array(self.TRAIN_DATA)
+
+        # Compute the normalization parameters:
+        self.compute_normalize_paras()
+        # Normalize training set:
+        self.normalize_trainset()
+        # END
+
+    def normalize_trainset(self):
+        """
+        Use the z-score method to normalize the training dataset.
+        Prerequisite: TRAIN_DATA, FEATURE_NUM, NORMALIZE_PARAS are set.
+        Given: None
+        Effect: Normalize the features of training set.
+        """
+        for fid in range(self.FEATURE_NUM):
+            for rid in range(self.TRAIN_DATA.shape[0]):
+                self.TRAIN_DATA[rid,fid] = ((self.TRAIN_DATA[rid,fid] - 
+                                             self.NORMALIZE_PARAS[fid][0]) 
+                                             / self.NORMALIZE_PARAS[fid][1])
+
+    def compute_normalize_paras(self):
+        """
+        Prerequisite: FEATURE_NUM & TRAIN_DATA are set.
+        Given: None
+        Returns: None
+        Effect: Sets the NORMALIZE_PARAS, which is a dictionary.
+                Key is the feature index
+                Value: (mean, std) since we are using z-score here.
+        """
+        for fid in range(self.FEATURE_NUM):
+            self.NORMALIZE_PARAS[fid] = (self.TRAIN_DATA[:,fid].mean(),
+                                          self.TRAIN_DATA[:,fid].std())
+    
+    def parse_train_point(self, line):
+        """
+        Prerequisite: FEATURE_NUM is set.
+        Given: A line of training record
+        Returns: A parsed record represented as a list
+        """
+        elements = line.split(',')
+        for i in range(self.FEATURE_NUM):
+            elements[i] = float(elements[i])
+        # Translate the label to a corresponding integer:
+        elements[self.FEATURE_NUM]=self.CLASS_LABELS.index(elements[self.FEATURE_NUM])
+        return elements[:(self.FEATURE_NUM+1)]
+    
+    def set_class_labels(self, line):
+        self.CLASS_LABELS = line.split(',')
+        # CLASS_LABELS[0] will contain redundant prefix:
+        self.CLASS_LABELS[0] = self.CLASS_LABELS[0].partition('{')[-1]
+        # CLASS_LABELS[-1] will contain redundant suffix:
+        self.CLASS_LABELS[-1] = self.CLASS_LABELS[-1].partition('}')[0]
+        # END
+
+if __name__ == '__main__':
+    #read_train_set("hw2-data/train.arff")
+    #print(CLASS_LABELS)
+    #print('feature num:' + str(FEATURE_NUM))    
+    #print('Training set:')
+    #print(TRAIN_DATA)
+    #print('Normalize Parameters:')
+    #print(NORMALIZE_PARAS)
+
+    trainset = TrainingInfo("hw2-data/train.arff")
+    print("Class labels:")
+    print(trainset.get_CLASS_LABELS())
+    print("Feature num:" + str(trainset.get_FEATURE_NUM()))
+    print("Normalized paras:")
+    print(trainset.get_NORMALIZE_PARAS())
+    print("Training Data:")
+    print(trainset.get_TRAIN_DATA())

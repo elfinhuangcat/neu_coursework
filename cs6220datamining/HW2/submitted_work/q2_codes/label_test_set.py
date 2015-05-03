@@ -1,0 +1,193 @@
+# -*- coding: utf-8 -*-
+"""
+This file reads the test set row by row and label each row using the 
+KNN method, where k = 1,3,5,7,9. The 5 labels will be added to the 
+end of the row. The output will form a new file.
+"""
+
+from read_train_set import *
+import math
+import numpy as np
+
+K_LIST = tuple([1,3,5,7,9])
+
+class TestingInfo:
+    """This is a class defining the structure of a testing information 
+       instance.
+    """
+    def __init__(self, file_path, trainset):
+        self.CLASS_LABELS = trainset.get_CLASS_LABELS()
+        self.FEATURE_NUM = trainset.get_FEATURE_NUM()
+        self.TEST_DATA = list() # At last it will be an ARRAY!!
+        # To record what is actually stored in test file:
+        self.TEST_RECORDS = list() 
+        # NORMALIZE_PARAS: key = feature index; value = (mean, std)
+        self.NORMALIZE_PARAS = dict()
+    
+        self.read_test_set(file_path)
+        self.compute_normalize_paras()
+        self.normalize_test_set()
+
+    def get_CLASS_LABELS(self):
+        return self.CLASS_LABELS
+    def get_FEATURE_NUM(self):
+        return self.FEATURE_NUM
+    def get_TEST_DATA(self):
+        return self.TEST_DATA
+    def get_NORMALIZE_PARAS(self):
+        return self.NORMALIZE_PARAS
+    def get_TEST_RECORDS(self):
+        return self.TEST_RECORDS
+
+    def read_test_set(self, file_path):
+        """
+        Given: file path of the test data
+        Effect: Sets the TEST_DATA as an array.
+        """
+        test_file = open(file_path, 'r')
+        # Skip the first few rows
+        line = test_file.readline()
+        while '@data' not in line:
+            line = test_file.readline()
+        # Read the remaining records:
+        for line in test_file:
+            self.TEST_RECORDS.append(line[:-1]) # Record this line
+            testpoint = self.parse_test_line(line)
+            # The normalized testpoint is stored separately:
+            self.TEST_DATA.append(testpoint)
+        self.TEST_DATA = np.array(self.TEST_DATA)
+
+    def parse_test_line(self, line):
+        """
+        Given: A string like this:
+               6.7,3.1,4.4,1.4,x1\n
+        Returns: The parsed datapoint stored as a list.
+        """
+        testpoint = line.split(',')
+        for i in range(self.FEATURE_NUM):
+            testpoint[i] = float(testpoint[i])
+        return testpoint[:self.FEATURE_NUM]
+
+    def compute_normalize_paras(self):
+        for fid in range(self.FEATURE_NUM):
+            self.NORMALIZE_PARAS[fid] = (self.TEST_DATA[:,fid].mean(),
+                                         self.TEST_DATA[:,fid].std())
+
+    def normalize_test_set(self):
+        for fid in range(self.FEATURE_NUM):
+            for rid in range(self.TEST_DATA.shape[0]):
+                self.TEST_DATA[rid,fid] = ((self.TEST_DATA[rid,fid] 
+                                            - self.NORMALIZE_PARAS[fid][0])
+                                            / self.NORMALIZE_PARAS[fid][1])
+        
+
+def label_test_set(testset, trainset):
+    """
+    Given: testset - the testing data info
+           trainset - the training data info
+    Returns: Nothing
+    Outputs: A new file "labeled-test.csv" with same format as 
+             the "test.arff", but with labels appended to the end 
+             of the test records and without the "xi" column.
+             (Without header as well)
+    """
+    output_file = open("labeled-test.csv","w")
+    
+    # For each record, label it using different Ks:
+    for i in range(len(testset.get_TEST_RECORDS())):
+        output_file.write(testset.get_TEST_RECORDS()[i])
+        for k in K_LIST:
+            label = compute_class_knn(testset.get_TEST_DATA()[i,:],
+                                      k, trainset)
+            output_file.write(',' + label)
+        output_file.write('\n')
+            
+    output_file.close()
+    # END
+
+def compute_class_knn(testpoint, k, trainset):
+    """
+    Given: line - A test file line representing a record.
+           k - The number of neighbours to consider.
+           trainset - A TrainInfo object contains information of trainset
+    Returns: The label for this line. (String)
+    """    
+    # `k_neighbours` - the points that are closest to the test point
+    k_neighbours = list()
+    # Init1: Fill the k_neighbours list with k members
+    for index in range(k):
+        dist = compute_distance(trainset.get_TRAIN_DATA()[index],
+                                testpoint)
+        k_neighbours.append((dist, index))    
+    # Init2: Sort the list by distance
+    k_neighbours = sorted(k_neighbours, key=lambda t : t[0])
+    
+    # For each remaining records in the training set, 
+    # compute the distance. 
+    for i in range(k,trainset.get_TRAIN_DATA().shape[0]):
+        dist = compute_distance(trainset.get_TRAIN_DATA()[i], testpoint)
+        for counter in range(k):
+            if dist < k_neighbours[counter][0]:
+                k_neighbours.insert(counter, (dist,i))
+                k_neighbours.pop()
+                break
+    
+    # Compute the class label of the testpoint:
+    return compute_class_label(k_neighbours, trainset)
+
+def compute_class_label(k_neighbours, trainset):
+    """
+    Given: k_neighbours - A list of tuples, which are sorted by the 
+           first elements.:
+               First element: Distance
+               Second element: Index of the training datapoint
+           trainset: A TrainInfo object contains info about training set
+    Returns: The class label (string) of the testpoint
+    """
+    # Try to decide the class label by number of votes:
+    votes = list()
+    for i in range(len(trainset.get_CLASS_LABELS())):
+        # 1st: class index
+        # 2nd: number of votes
+        # 3rd: sum of distances
+        votes.append([i,0,0])
+    for item in k_neighbours:
+        classid = int(trainset.get_TRAIN_DATA()[item[1]][-1])
+        votes[classid][1] += 1
+        votes[classid][2] += item[0]
+    
+    # Sort the list votes by number of votes:
+    sorted_votes = sorted(votes, key=lambda l: l[1],reverse=True)
+    if sorted_votes[0][1] != sorted_votes[1][1]:
+        return trainset.get_CLASS_LABELS()[sorted_votes[0][0]]
+    # Else: decide the class label by least total distance
+    vote = sorted_votes[0]
+    i = 0
+    while i < len(sorted_votes) and sorted_votes[i][1] == vote[1]:
+        if sorted_votes[i][2] < vote[2]:
+            vote = sorted_votes[i]
+        i += 1
+    return trainset.get_CLASS_LABELS()[vote[0]]
+    
+
+def compute_distance(trainpoint, testpoint):
+    """
+    Given: trainpoint - A numpy array containing the features and label of 
+                        a training record.
+           testpoint - A tuple containing the features of a testing
+                       record.
+    Returns: The Euclidean distance between these two points.
+    """
+    dist = 0
+    for fid in range(len(testpoint)):
+        dist += (trainpoint[fid] - testpoint[fid]) ** 2
+    return math.sqrt(dist)
+
+
+if __name__ == '__main__':
+    trainset = TrainingInfo("hw2-data/train.arff")
+
+    #label_test_set("hw2-data/test.arff", trainset)
+    testset = TestingInfo("hw2-data/test.arff", trainset)
+
+    label_test_set(testset, trainset)

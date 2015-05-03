@@ -1,0 +1,114 @@
+package main;
+/**************************************************
+ * Usage: 
+ * hadoop jar <name-of-jar.jar> main/MedianOfPurchases 
+ * <path-to-input> <path-to-output>  
+ * <bin-size> <sample-rate>
+ * 
+ * This program is designed to run in Linux system.
+ * 
+ * Date created: Feb 10, 2015
+ * @author Yaxin Huang, Revon Matthews
+ **************************************************/
+
+import java.io.File;
+import java.io.FileWriter;
+import java.util.Scanner;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.DoubleWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+import org.apache.hadoop.util.Tool;
+import org.apache.hadoop.util.ToolRunner;
+
+public class MedianOfPurchases extends Configured implements Tool {
+    
+    private static long jobRunningTime = 0;
+    
+    public static void main(String[] args) throws Exception {
+        /*****************************************************************
+         * When the jar is run, the user should include these arguments:
+         * args[0]: path to input file
+         * args[1]: path to output directory (the folder should not exist)
+         * args[2]: bin size, a group of prices of this bin size will 
+         *          form an intermediate median. An integer larger than 0.
+         * args[3]: sample rate(x), specifies every x rows there will be 
+         *          one row treated as input. An integer larger than 0.
+         * Date created: Feb 10, 2015
+         * @author Yaxin Huang, Revon Matthews
+         *****************************************************************/
+        // Arguments length check
+        if (args.length != 2) {
+            System.out.println("Usage: hadoop jar <name-of-jar.jar> "
+                    + "main/MedianOfPurchases <path-to-input-file> "
+                    + "<path-to-output-directory> ");
+            System.exit(1);
+        }
+        
+        // Run the job
+        int res = ToolRunner.run(new Configuration(), 
+                new MedianOfPurchases(), args);
+        System.exit(res);
+    }
+    
+    public int run(String[] args) throws Exception {
+        /*****************************************************************
+         * When the jar is run, the user should include these arguments:
+         * args[0]: path to input file
+         * args[1]: path to output directory (the folder should not exist)
+         * args[2]: bin size, a group of prices of this bin size will 
+         *          form an intermediate median. An integer larger than 0.
+         * args[3]: sample rate(x), specifies every x rows there will be 
+         *          one row treated as input. An integer larger than 0.
+         * Date created: Feb 10, 2015
+         * @author Yaxin Huang
+         *****************************************************************/
+        
+        // When implementing tool
+        Configuration conf = this.getConf();
+ 
+        // Create job
+        @SuppressWarnings("deprecation")
+        Job job = new Job(conf, "Median Of Purchases");
+        job.setJarByClass(MedianOfPurchases.class);
+ 
+        // Setup MapReduce job
+        // Do not specify the number of Reducer
+        job.setMapperClass(MedianOfPurchasesMapper.class);
+        job.setReducerClass(MedianOfPurchasesReducer.class);
+        job.setCombinerClass(MedianOfPurchasesCombiner.class);
+ 
+        // Specify key / value        
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(DoubleWritable.class);
+ 
+        // Input: the inputPath can be the sampled input file's path
+        FileInputFormat.addInputPath(job, new Path(args[0]));
+        job.setInputFormatClass(TextInputFormat.class);
+ 
+        // Output
+        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+        job.setOutputFormatClass(TextOutputFormat.class);
+
+        jobRunningTime = System.currentTimeMillis();
+        if (job.waitForCompletion(true)) {
+            // Exit normally
+            jobRunningTime = System.currentTimeMillis() - jobRunningTime;
+            System.out.println("#------------End-----------#\n"
+                    + "Job running time = " + jobRunningTime + " ms\n");
+            // File sampledInput = new File(inputPath);
+            // sampledInput.delete();
+            return 0;
+        }
+        else {
+            return 1;
+        }
+    }
+}

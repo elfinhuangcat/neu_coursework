@@ -1,0 +1,42 @@
+What you need before running anything:
+Put the training data, testing data and checking data under 
+the directory "data". For example you will need:
+./data/data.csv
+./data/predict.csv
+./data/check.csv
+And please don't delete the header file in the data folder
+
+How to run the program in standalone mode:
+(1) Build the jar:
+    Cd to this directory (The folder containing this README)
+    Run the following command:
+    $ ant jar
+(2) You may provide relative path:
+    * (1)hadoop jar MapReduce_A3.jar -s -learn <train.csv>
+    * (2)hadoop jar MapReduce_A3.jar -s -predict <model.m> <predict.csv>
+    * (3)hadoop jar MapReduce_A3.jar -s -check <predict.csv> <check.csv> 
+
+How to run the program in cluster mode (Buggy):
+(1) Upload the MapReduce_A3.jar to your S3 bucket.
+(2) In the folder that the jar resides in, create a data folder,
+    and upload the header, data.csv, predict.csv, check.csv to 
+    this folder.
+(3) Follow the steps in this tutorial to setup the cluster:
+    https://piazza.com/class/i4ppp5auv1n7k5?cid=94
+    and when you come to the step you need to run the jar:
+    * (1) -c -learn <train.csv> <path_to_your_s3_bucket>
+          (So here train.csv is a relative path starting from your bucket)
+    * (2) -c -predict <model.m> <predict.csv> <path_to_your_s3_bucket>
+    * (3) -c -check <predict.csv> <check.csv> <path_to_your_s3_bucket>
+    * PLASE NOTE THAT: <path_to_your_s3_bucket> must end with a "/"
+
+Where are the generated files:
+(1) learn:
+    If you run in standalone mode, the generated model.m can be found in the 
+    "data" directory.
+(2) predict:
+    If you run in standalone mode, the generated comma separated can be found 
+    in "./data/predicted-dir/part-r-0000"
+(3) check:
+    The result will be output to the terminal and a "log" file will be 
+    generated in this directory as well.

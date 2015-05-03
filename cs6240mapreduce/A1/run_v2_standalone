@@ -1,0 +1,20 @@
+#!/bin/sh
+# 1. Clean the possible previous-created files and directories:
+cd MapReduce_A1_v2
+rm -r output
+ant -f build.xml clean-init
+ant -f build.xml clean-compile
+ant -f build.xml clean-jar
+
+# 2. Complie and run the v2 program:
+ant -f build.xml compile jar
+
+# 3. Copy the jar to the same directory as input file
+cp lib/MapReduce_A1_v2.jar ../MapReduce_A1_v2.jar
+cd ..
+# 4. Using hadoop to run
+hadoop --config local-config/ jar MapReduce_A1_v2.jar \
+MedianOfPurchases purchases4.txt
+
+# 5. Remove the intermediate jar:
+rm MapReduce_A1_v2.jar

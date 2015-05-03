@@ -1,0 +1,9 @@
+#!/bin/sh
+# 1. Clean the possible previous-created files and directories:
+cd MapReduce_A1_v1
+ant -f build.xml clean-init
+ant -f build.xml clean-compile
+ant -f build.xml clean-jar
+
+# 2. Complie and run the v1 program:
+ant -f build.xml run

@@ -1,0 +1,50 @@
+<!-- This build.xml format comes from: --> 
+<!-- http://oak.cs.ucla.edu/cs144/projects/ant/tutorial.html -->
+<project default="all">
+  <property name="obj-dir" location="obj" />
+  <property name="lib-dir" location="lib" />
+  <property name="src-dir" location="src" />
+  <property name="jar-name" value="MapReduce_A1_v1" />
+  <property name="main-class" value="MedianOfPurchases" />
+
+  <target name="init">
+    <mkdir dir="${obj-dir}" />
+    <mkdir dir="${lib-dir}" />
+  </target>
+
+  <target name="clean-init">
+    <delete dir="${obj-dir}" />
+    <delete dir="${lib-dir}" />
+  </target>
+
+  <target name="compile" depends="init">
+    <javac srcdir="${src-dir}"
+           destdir="${obj-dir}" />
+  </target>
+
+  <target name="clean-compile">
+    <delete>
+      <fileset dir="${obj-dir}" includes="**/*.class" />
+    </delete>
+  </target>
+
+  <target name="jar" depends="compile">
+    <jar destfile="${lib-dir}/${jar-name}.jar"
+         basedir="${obj-dir}" />
+  </target>
+
+  <target name="clean-jar">
+    <delete file="${lib-dir}/${jar-name}.jar" />
+  </target>
+
+  <target name="run" depends="jar">
+    <java classname="${main-class}" fork="true">
+        <classpath path="${lib-dir}/${jar-name}.jar" />
+        <arg line="../purchases4.txt"/>
+    </java>
+  </target>
+
+  <target name="all" depends="run"/>
+
+  <target name="clean" depends="clean-init"/>
+</project>
